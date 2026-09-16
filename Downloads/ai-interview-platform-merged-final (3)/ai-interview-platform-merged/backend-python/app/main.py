@@ -28,8 +28,8 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=FRONTEND_ORIGINS,
-    allow_origin_regex=r"(?:https://[^/]+|http://(localhost|127\.0\.0\.1):\d+)",
-    allow_credentials=True,
+    allow_origin_regex=r".*",
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
