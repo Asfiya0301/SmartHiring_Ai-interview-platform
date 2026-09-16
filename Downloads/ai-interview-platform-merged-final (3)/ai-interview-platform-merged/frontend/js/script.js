@@ -3,12 +3,12 @@
 // Talks to the Express/JWT/OAuth backend in /backend
 // ============================================================
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://ai-interview-backend-production-4dac.up.railway.app/api';
 
 // Module 3 (AI Interview Generation, candidate feedback view, question
 // TTS) is served by the Python/FastAPI service in /backend-python —
 // it shares the same database and JWT secret as the Node backend above.
-const PY_API_BASE_URL = 'http://localhost:8001/api';
+const PY_API_BASE_URL = 'https://aimock-interview-production.up.railway.app/api';
 
 const DASHBOARD_BY_ROLE = {
   candidate: 'candidate.html',
