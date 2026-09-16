@@ -28,7 +28,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=FRONTEND_ORIGINS,
-    allow_origin_regex=r"(?:https://[a-z0-9-]+\.up\.railway\.app|http://(localhost|127\.0\.0\.1):\d+)",
+    allow_origin_regex=r"(?:https://[^/]+|http://(localhost|127\.0\.0\.1):\d+)",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
