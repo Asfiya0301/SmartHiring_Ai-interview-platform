@@ -338,7 +338,7 @@ async function finishInterview() {
   const recordingBlob = await stopInterviewRecording();
   stopWebcamTracks(); // turn the camera off right away — proctoring listeners (incl. the
                        // leave-page guard) stay armed until the /finish call below settles
-  uploadInterviewRecording(recordingBlob); // fire-and-forget — never blocks scoring/finish
+  await uploadInterviewRecording(recordingBlob);
 
   if (document.fullscreenElement) {
     document.exitFullscreen().catch(() => {});
